@@ -1,0 +1,102 @@
+{
+  "name": "kc_angular",
+  "version": "0.8.1",
+  "description": "This package contains the (core) Angular portion of the Knowledge web-app.",
+  "author": "Rob Royce <robertris2@gmail.com> (https://robroyce.dev)",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build main --configuration production --base-href ./",
+    "build-dev": "ng build main --configuration development --base-href ./",
+    "build-main": "ng build main --configuration production --base-href ./",
+    "clean": "rm -rf dist",
+    "purge": "rm -rf node_modules .angular",
+    "start": "echo 'Run this command from the top level directory to start Electron and load the Angular modules.'",
+    "test": "ng test",
+    "watch": "ng build --configuration production --base-href ./ --watch",
+    "watch-dev": "ng build --configuration development --base-href ./ --watch",
+    "watch-main": "ng build main --configuration production --base-href ./ --watch",
+    "watch-main-dev": "ng build main --configuration development --base-href ./ --watch",
+    "lint": "ng lint"
+  },
+  "dependencies": {
+    "@angular/animations": "~14.2.8",
+    "@angular/cdk": "^14.2.6",
+    "@angular/common": "~14.2.8",
+    "@angular/compiler": "~14.2.8",
+    "@angular/core": "~14.2.8",
+    "@angular/forms": "^14.2.8",
+    "@angular/platform-browser": "^14.2.8",
+    "@angular/platform-browser-dynamic": "^14.2.8",
+    "@angular/router": "~14.2.8",
+    "@angular/youtube-player": "^14.2.6",
+    "@fullcalendar/angular": "^5.11.2",
+    "@fullcalendar/daygrid": "^5.11.2",
+    "@fullcalendar/interaction": "^5.11.2",
+    "@fullcalendar/list": "^5.11.2",
+    "@fullcalendar/timegrid": "^5.11.2",
+    "chart.js": "^3.9.1",
+    "chokidar": "^3.5.3",
+    "cytoscape": "^3.23.0",
+    "cytoscape-cola": "^2.5.1",
+    "cytoscape-dagre": "^2.5.0",
+    "cytoscape-fcose": "^2.1.0",
+    "cytoscape-klay": "^3.1.4",
+    "eslint": "^8.38.0",
+    "fuse.js": "^6.6.2",
+    "marked": "^4.3.0",
+    "primeflex": "^3.2.1",
+    "primeicons": "^6.0.1",
+    "primeng": "^14.1.2",
+    "rxjs": "~7.5.7",
+    "tslib": "^2.4.1",
+    "typescript": "<4.9.0",
+    "zone.js": "^0.11.8"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.7",
+    "@angular-eslint/builder": "14.1.2",
+    "@angular-eslint/eslint-plugin": "14.1.2",
+    "@angular-eslint/eslint-plugin-template": "14.1.2",
+    "@angular-eslint/schematics": "14.1.2",
+    "@angular-eslint/template-parser": "14.1.2",
+    "@angular/cli": "^14.2.7",
+    "@angular/compiler-cli": "^14.2.8",
+    "@types/cytoscape": "^3.19.9",
+    "@types/cytoscape-dagre": "^2.3.0",
+    "@types/cytoscape-fcose": "^2.1.0",
+    "@types/cytoscape-klay": "^3.1.0",
+    "@types/marked": "^4.0.8",
+    "@typescript-eslint/eslint-plugin": "5.37.0",
+    "@typescript-eslint/parser": "5.37.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "ng-packagr": "^14.2.2",
+    "typescript": "<4.9.0",
+    "web-worker": "^1.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "html"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  }
+}

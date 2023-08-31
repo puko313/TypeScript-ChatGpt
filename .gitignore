@@ -1,0 +1,31 @@
+# MacOS files
+.DS_Store
+
+# Angular files
+**/.angular
+
+
+# Jupyter notebook checkpoints
+**/*.ipynb_checkpoints
+
+# Node modules
+**/node_modules
+
+# Build artifacts
+**/dist
+
+# Python stuff
+__pycache__
+
+# Secret stuff
+auth.json
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+*.d.ts

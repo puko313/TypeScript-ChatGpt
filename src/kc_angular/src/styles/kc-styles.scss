@@ -1,0 +1,136 @@
+/*!
+ * Copyright (c) 2023 Rob Royce
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+.knowledge-source-icon {
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.source-drag-handle {
+  cursor: move;
+}
+
+.pulsate-fwd {
+  animation: pulsate-fwd 3s ease-in-out infinite forwards;
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.project-receptor-in {
+  animation: project-receptor-in 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.560) both;
+}
+
+@keyframes project-receptor-in {
+  0% {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px) translateX(12px);
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.project-receptor-out {
+  animation: project-receptor-out 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.560) reverse both;
+}
+
+@keyframes project-receptor-out {
+  0% {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px) translateX(12px);
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.tracking-in-expand-fwd {
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite alternate forwards;
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.bg-pan-left {
+  animation: bg-pan-left 3s infinite alternate both;
+}
+
+@keyframes bg-pan-left {
+  0% {
+    background-position: 100% 50%;
+    background: var(--surface-ground);
+  }
+  100% {
+    background-position: 0 50%;
+    background: var(--surface-a);
+  }
+}
+
+.kenburns-top {
+  animation: kenburns-top 3s ease-out alternate-reverse both;
+}
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+
